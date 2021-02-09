@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:meal_app/dummy_data.dart';
-import './models/category.dart';
-import './category_item.dart';
+import '../data/dummy_data.dart';
+import '../models/category.dart';
+import '../widgets/category_item.dart';
 
 /// file to handle what will be displayed on the categories screen
 

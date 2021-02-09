@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:meal_app/category_meals_screen.dart';
-import './categories_screen.dart';
+
+import './screens/category_meals_screen.dart';
+import './screens/meal_detail_screen.dart';
+import './screens/categories_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -29,8 +31,10 @@ class MyApp extends StatelessWidget {
           CategoriesScreen(), // home argument is the entry point, or root, screen of the app
       // routes map holding the routes to the pages we have available.
       // the key is the name of the route, the value is the file (screen) that we want the use directed to
+      initialRoute: '/', // route for home page
       routes: {
         CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
+        MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
       },
     );
   }
