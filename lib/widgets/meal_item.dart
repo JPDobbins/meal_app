@@ -52,7 +52,6 @@ class MealItem extends StatelessWidget {
     }
   }
 
-  @override
   void selectMeal(BuildContext context) {
     Navigator.of(context).pushNamed(
       MealDetailScreen.routeName,

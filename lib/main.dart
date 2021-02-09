@@ -36,6 +36,17 @@ class MyApp extends StatelessWidget {
         CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
         MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
       },
+      // method defining route to take for navigation, when no route is specified
+      // Can be used in debugging, or if the app were building is very dynamic, and we may not know exactly where the user may end up going
+      onGenerateRoute: (settings) {
+        print(settings.arguments);
+        return MaterialPageRoute(builder: (ctx) => CategoriesScreen());
+      },
+      // if flutter cannot find a specified route in the route map, or in onGeneratedRoute method, this method provides the final fallback navigation
+      // could display a error page, or take them back to a home page, or other appropriate pages
+      onUnknownRoute: (settings) {
+        return MaterialPageRoute(builder: (ctx) => CategoriesScreen());
+      },
     );
   }
 }
